@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Aadi ❤️</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body{
+  overflow:hidden;
+}
+
+section{
+  height:100vh;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-direction:column;
+  text-align:center;
+  transition:1s;
+}
+
+/* PAGE 1 */
+#page1{
+  background: linear-gradient(135deg,#ff758c,#ff7eb3);
+  color:white;
+}
+
+h1{
+  font-size:3rem;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{text-shadow:0 0 10px white;}
+  to{text-shadow:0 0 30px yellow;}
+}
+
+p{
+  font-size:1.2rem;
+  margin:20px;
+}
+
+button{
+  padding:12px 25px;
+  font-size:1rem;
+  border:none;
+  border-radius:25px;
+  background:white;
+  color:#ff4f7a;
+  cursor:pointer;
+}
+
+/* PAGE 2 */
+#page2{
+  background: linear-gradient(135deg,#6a11cb,#2575fc);
+  color:white;
+  display:none;
+}
+
+img{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  border:5px solid white;
+  margin:20px;
+  animation: zoom 3s infinite;
+}
+
+@keyframes zoom{
+  0%,100%{transform:scale(1);}
+  50%{transform:scale(1.1);}
+}
+
+/* PAGE 3 */
+#page3{
+  background: radial-gradient(circle,#000428,#004e92);
+  color:white;
+  display:none;
+}
+
+.firework{
+  font-size:2rem;
+  animation: pop 1s infinite;
+}
+
+@keyframes pop{
+  0%{opacity:0;}
+  50%{opacity:1;}
+  100%{opacity:0;}
+}
+</style>
+</head>
+
+<body>
+
+<!-- 🎵 BACKGROUND MUSIC -->
+<audio autoplay loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- PAGE 1 -->
+<section id="page1">
+  <h1>🎉 Happy Birthday Chotu Aadi 🎂</h1>
+  <p>
+    Today is not just a date,<br>
+    It’s the day my favorite person was born 💖
+  </p>
+  <button onclick="goPage2()">Tap for Surprise 💕</button>
+</section>
+
+<!-- PAGE 2 -->
+<section id="page2">
+  <h1>💖 My Aadi 💖</h1>
+
+  <!-- 🔴 ADD HIS PHOTO NAME BELOW -->
+  <img src="aadi.jpg" alt="Aadi">
+
+  <p>
+    You are my smile, my strength,<br>
+    and my happiest place 🌸<br><br>
+    Every moment with you feels magical ✨
+  </p>
+
+  <button onclick="goPage3()">One Last Surprise 🎁</button>
+</section>
+
+<!-- PAGE 3 -->
+<section id="page3">
+  <h1>🎆 Surpriseeee 🎆</h1>
+  <p class="firework">💥 🎇 💥 🎇 💥</p>
+  <p>
+    Aadi, you are deeply loved 💝<br>
+    May all your dreams come true 💫<br><br>
+    Happy Birthday once again, my forever ❤️
+  </p>
+</section>
+
+<script>
+function goPage2(){
+  document.getElementById("page1").style.display="none";
+  document.getElementById("page2").style.display="flex";
+}
+
+function goPage3(){
+  document.getElementById("page2").style.display="none";
+  document.getElementById("page3").style.display="flex";
+}
+</script>
+
+</body>
+</html>
